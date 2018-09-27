@@ -67,4 +67,16 @@ func main() {
 			log.Fatalf("Failed to get MeshPolicy named %s", mp.ObjectMeta.Name)
 		}
 	}
+	// Test VirtualServices
+	gwList, err := ic.NetworkingV1alpha3().Gateways(namespace).List(metav1.ListOptions{})
+	if err != nil {
+		log.Fatalf("Failed to get Gateways in %s namespace: %s", namespace, err)
+	}
+	for i := range gwList.Items {
+		gw := gwList.Items[i]
+		for j,srv := range gw.Spec.Servers {
+
+			log.Printf("Index: %d Gateway / Servers %d : %+v\n", i, j, srv)
+		}
+	}
 }

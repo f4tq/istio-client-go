@@ -17,7 +17,7 @@ DEPS := $(filter-out $(GENERATED_FILES_PATTERN), $(DEPS_ALL))
 GENERATED_FILES := $(filter $(GENERATED_FILES_PATTERN), $(DEPS_ALL))
 BOILERPLATE := aspenmesh-boilerplate.go.txt
 
-GROUP_VERSIONS := "networking:v1alpha3, authentication:v1alpha1"
+GROUP_VERSIONS := "networking:v1alpha3, authentication:v1alpha1 "
 
 all: generate-code test
 

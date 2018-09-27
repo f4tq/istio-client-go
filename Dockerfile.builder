@@ -1,4 +1,4 @@
-FROM golang:1.10-stretch as builder
+FROM golang:1.10-stretch 
 
 WORKDIR /go/src/github.com/aspenmesh/istio-client-go
 
