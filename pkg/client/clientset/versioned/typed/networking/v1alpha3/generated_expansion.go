@@ -1,6 +1,6 @@
 /*
 Portions Copyright 2018 The Kubernetes Authors.
-Portions Copyright 2018 Aspen Mesh Authors.
+Portions Copyright 2018 Adobe,Inc Mesh Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -22,5 +22,7 @@ package v1alpha3
 type DestinationRuleExpansion interface{}
 
 type GatewayExpansion interface{}
+
+type ServiceEntryExpansion interface{}
 
 type VirtualServiceExpansion interface{}

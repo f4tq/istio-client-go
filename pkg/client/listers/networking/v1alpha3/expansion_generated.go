@@ -1,6 +1,6 @@
 /*
 Portions Copyright 2018 The Kubernetes Authors.
-Portions Copyright 2018 Aspen Mesh Authors.
+Portions Copyright 2018 Adobe,Inc Mesh Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -34,6 +34,14 @@ type GatewayListerExpansion interface{}
 // GatewayNamespaceListerExpansion allows custom methods to be added to
 // GatewayNamespaceLister.
 type GatewayNamespaceListerExpansion interface{}
+
+// ServiceEntryListerExpansion allows custom methods to be added to
+// ServiceEntryLister.
+type ServiceEntryListerExpansion interface{}
+
+// ServiceEntryNamespaceListerExpansion allows custom methods to be added to
+// ServiceEntryNamespaceLister.
+type ServiceEntryNamespaceListerExpansion interface{}
 
 // VirtualServiceListerExpansion allows custom methods to be added to
 // VirtualServiceLister.

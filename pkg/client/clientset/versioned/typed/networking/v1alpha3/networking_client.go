@@ -1,6 +1,6 @@
 /*
 Portions Copyright 2018 The Kubernetes Authors.
-Portions Copyright 2018 Aspen Mesh Authors.
+Portions Copyright 2018 Adobe,Inc Mesh Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -30,6 +30,7 @@ type NetworkingV1alpha3Interface interface {
 	RESTClient() rest.Interface
 	DestinationRulesGetter
 	GatewaysGetter
+	ServiceEntriesGetter
 	VirtualServicesGetter
 }
 
@@ -44,6 +45,10 @@ func (c *NetworkingV1alpha3Client) DestinationRules(namespace string) Destinatio
 
 func (c *NetworkingV1alpha3Client) Gateways(namespace string) GatewayInterface {
 	return newGateways(c, namespace)
+}
+
+func (c *NetworkingV1alpha3Client) ServiceEntries(namespace string) ServiceEntryInterface {
+	return newServiceEntries(c, namespace)
 }
 
 func (c *NetworkingV1alpha3Client) VirtualServices(namespace string) VirtualServiceInterface {

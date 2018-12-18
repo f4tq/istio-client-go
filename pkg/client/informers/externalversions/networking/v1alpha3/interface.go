@@ -1,6 +1,6 @@
 /*
 Portions Copyright 2018 The Kubernetes Authors.
-Portions Copyright 2018 Aspen Mesh Authors.
+Portions Copyright 2018 Adobe,Inc Mesh Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -29,6 +29,8 @@ type Interface interface {
 	DestinationRules() DestinationRuleInformer
 	// Gateways returns a GatewayInformer.
 	Gateways() GatewayInformer
+	// ServiceEntries returns a ServiceEntryInformer.
+	ServiceEntries() ServiceEntryInformer
 	// VirtualServices returns a VirtualServiceInformer.
 	VirtualServices() VirtualServiceInformer
 }
@@ -52,6 +54,11 @@ func (v *version) DestinationRules() DestinationRuleInformer {
 // Gateways returns a GatewayInformer.
 func (v *version) Gateways() GatewayInformer {
 	return &gatewayInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// ServiceEntries returns a ServiceEntryInformer.
+func (v *version) ServiceEntries() ServiceEntryInformer {
+	return &serviceEntryInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // VirtualServices returns a VirtualServiceInformer.
