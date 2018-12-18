@@ -14,7 +14,7 @@ var ServiceEntryCommands cli.Command
 func init(){
 	ServiceEntryCommands = cli.Command     {
 		Name:    "service-entry",
-		Aliases: []string{"gw"},
+		Aliases: []string{"se"},
 		Usage:   "service-entry create|update|delete|get|list",
 		Subcommands: []cli.Command{
 			{
