@@ -67,3 +67,7 @@ required = [
     unused-packages = false
     non-go = false
     go-tests = false
+
+[[constraint]]
+  name = "github.com/urfave/cli"
+  version = "1.20.0"

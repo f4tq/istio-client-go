@@ -160,6 +160,14 @@
   version = "v1.0.2"
 
 [[projects]]
+  digest = "1:5dba68a1600a235630e208cb7196b24e58fcbb77bb7a6bec08fcd23f081b0a58"
+  name = "github.com/urfave/cli"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "cfb38830724cc34fedffe9a2a29fb54fa9169cd1"
+  version = "v1.20.0"
+
+[[projects]]
   branch = "master"
   digest = "1:3f3a05ae0b95893d90b9b3b5afdb79a9b3d96e4e36e099d841ae602e4aca0da8"
   name = "golang.org/x/crypto"
@@ -432,6 +440,7 @@
   input-imports = [
     "github.com/golang/glog",
     "github.com/golang/protobuf/proto",
+    "github.com/urfave/cli",
     "istio.io/api/authentication/v1alpha1",
     "istio.io/api/networking/v1alpha3",
     "k8s.io/apimachinery/pkg/api/errors",
